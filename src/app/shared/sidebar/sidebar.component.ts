@@ -17,4 +17,13 @@ export class SidebarComponent
 
   constructor(private gifsservice: GifsService) { }
 
+  buscar(valor: string) 
+	{	
+		if(valor.trim().length === 0 ){
+			return;
+		}
+
+    this.gifsservice.buscarGifs(valor)
+	}
+
 }
